@@ -1,4 +1,5 @@
 import React from "react";
+import {searchPokemon} from '../api';
 const {useState} = React;
 
 const Searchbar = () => {
@@ -9,6 +10,11 @@ const Searchbar = () => {
         search = e.terget.value;
     }
 
+    const onClick = async (e) => {
+        const data = await searchPokemon(search);
+        console.log(data)
+    }
+
     return (
         <div>
             <div>
@@ -17,7 +23,7 @@ const Searchbar = () => {
                     onChange={onChange} />
             </div>
             <div>
-                {search}
+                <button onClick={onClick}>Buscar</button>
             </div>
         </div>
     );
