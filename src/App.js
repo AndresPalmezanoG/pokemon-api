@@ -8,8 +8,8 @@ import { getPokemonData, getPokemons, searchPokemons } from './api';
 const { useState, useEffect } = React;
 
 function App() {
-  const [pokemons, setPokemon] = useState([]);
-  const [page, setPage] = useState(1);
+  const [pokemons, setPokemons] = useState([]);
+  const [page, setPage] = useState(3);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
 
@@ -29,10 +29,8 @@ function App() {
   };
 
   useEffect(() => {
-
-      fetchPokemons();
-    
-  }, [page]);
+    fetchPokemons();
+    }, [page]);
 
   return (
     <div>
@@ -43,9 +41,11 @@ function App() {
           <div>Cargando pokemones...</div>
         ) : (
           <Pokedex
+            loading={loading}
             pokemons={pokemons}
             page={page}
             setPage={setPage}
+            total={setTotal}
           />
         )}
       </div>
