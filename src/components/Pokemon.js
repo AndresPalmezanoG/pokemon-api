@@ -4,9 +4,9 @@ const Pokemon = (props) => {
     const { pokemon } = props;
     return (
         <div className="pokemon-card">
-            <div className="pokemon-img">
+            <div className="pokemon-img-container">
                 <img
-                    src={pokemon.sprites.font_default}
+                    src={pokemon.sprites.front_default}
                     alt={pokemon.name} />
             </div>
             <div>
