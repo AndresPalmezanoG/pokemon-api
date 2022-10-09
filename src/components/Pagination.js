@@ -6,10 +6,10 @@ const Pagination = (props) => {
 return (
     <div className="pagination">
         <button className="pagination-btn" onClick={onLeftClick}>
-            <div className="icon"> 👹 </div></button>
+            <div className="icon"> 👈 </div></button>
             <div> {page} de {totalPages} </div>
         <button className="pagination-btn" onClick={onRightClick}>
-            <div> 👺 </div></button>
+            <div className="icon"> 👉 </div></button>
         </div>
     );
 };

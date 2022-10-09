@@ -9,7 +9,7 @@ return (
     <nav>
         <div/>
             <div>
-                <img src={imgUrl} alt="pokemon-logo" className="navbar-image" />
+                <img src={imgUrl} alt="pokeapi-logo" className="navbar-image" />
             </div>
         <div/>
     </nav>

@@ -7,9 +7,9 @@ const Pokemon = (props) => {
         <div className="pokemon-card">
             <div className="pokemon-img-container">
                 <img
-                src={pokemon.sprites.front_default}
-                alt={pokemon.name} 
-                className="pokemon-img"/>
+                    src={pokemon.sprites.front_default}
+                    alt={pokemon.name}
+                    className="pokemon-img" />
             </div>
             <div className="card-body">
                 <div className="card-top">
@@ -19,7 +19,11 @@ const Pokemon = (props) => {
                 <div className="card-bottom">
                     <div className="pokemon-type">
                         {pokemon.types.map((type, idx) => {
-                            return (<div key={idx}>{type.type.name}</div>);
+                            return (
+                                <div key={idx} className="pokemon-type-text">
+                                    {type.type.name}
+                                </div>
+                            );
                         })}
                     </div>
                 </div>
